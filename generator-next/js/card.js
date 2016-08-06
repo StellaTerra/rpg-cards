@@ -32,6 +32,7 @@ var RpgCards;
             this.count = 1;
             this.title = "New card";
             this.title_size = null;
+            this.font_size = null;
             this.title_icon_text = null;
             this.color = null;
             this.color_front = null;
@@ -48,6 +49,7 @@ var RpgCards;
             result.count = json.count || 1;
             result.title = json.title || "";
             result.title_size = json.title_size || null;
+            result.font_size = json.font_size || null;
             result.title_icon_text = json.title_icon_text || null;
             result.color = json.color || null;
             result.color_front = json.color_front || null;
@@ -64,6 +66,7 @@ var RpgCards;
                 count: this.count,
                 title: this.title,
                 title_size: this.title_size,
+                font_size: this.font_size,
                 title_icon_text: this.title_icon_text,
                 color: this.color,
                 color_front: this.color_front,
@@ -140,6 +143,9 @@ var RpgCards;
         };
         Card.prototype.getTitleSize = function (options) {
             return this.title_size || options.default_title_size || "13";
+        };
+        Card.prototype.getFontSize = function (options) {
+            return this.font_size || "8";
         };
         Card.prototype.getTitleIconText = function (options) {
             return this.title_icon_text || "";

@@ -19,6 +19,7 @@ declare module RpgCards {
         count: number;
         title: string;
         title_size: string;
+        font_size: string;
         title_icon_text: string;
         color: string;
         color_front: string;

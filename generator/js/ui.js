@@ -173,6 +173,7 @@ function ui_update_selected_card() {
     if (card) {
         $("#card-title").val(card.title);
         $("#card-title-size").val(card.title_size);
+        $("#card-font-size").val(card.font_size);
         $("#card-count").val(card.count);
         $("#card-icon").val(card.icon);
         $("#card-icon-back").val(card.icon_back);
@@ -183,6 +184,7 @@ function ui_update_selected_card() {
     } else {
         $("#card-title").val("");
         $("#card-title-size").val("");
+        $("#card-font-size").val("");
         $("#card-count").val(1);
         $("#card-icon").val("");
         $("#card-icon-back").val("");
@@ -453,6 +455,7 @@ $(document).ready(function () {
 
     $("#card-title").change(ui_change_card_title);
     $("#card-title-size").change(ui_change_card_property);
+    $("#card-font-size").change(ui_change_card_property);
     $("#card-icon").change(ui_change_card_property);
     $("#card-count").change(ui_change_card_property);
     $("#card-icon-back").change(ui_change_card_property);

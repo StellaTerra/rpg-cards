@@ -105,7 +105,8 @@ function card_element_icon(card_data, options) {
 
 function card_element_subtitle(params, card_data, options) {
     var subtitle = params[0] || "";
-    return '<div class="card-element card-subtitle">' + subtitle + '</div>';
+    var subtitle_size = card_data.font_size || 'normal';
+    return '<div class="card-element card-subtitle card-subtitle-' + subtitle_size + '">' + subtitle + '</div>';
 }
 
 function card_element_picture(params, card_data, options) {
@@ -301,7 +302,7 @@ function card_generate_front(data, options) {
     var style_color = card_generate_color_style(color, options);
 
     var result = "";
-    result += '<div class="card card-size-' + options.card_size + '" ' + style_color + '>';
+    result += '<div class="card card-' + data.font_size + ' card-size-' + options.card_size + '" ' + style_color + '>';
     result += card_element_icon(data, options);
     result += card_element_title(data, options);
     result += card_generate_contents(data.contents, data, options);
